@@ -2,10 +2,24 @@
 
 >_a joke, mostly._
 
-This little project's only purpose is to reproduce, with a slight interactivity twist, the following twitter meme:
+My goal with this little project was to learn more about React & React Hooks, `useEffect()` and `useRef()` in particular. So, naturally, I reproduced, with a slight interactivity twist, a dead twitter meme to do so.
+
+## Setup
+
+This was made using `create-react-app`. To install it, simply clone the project, then run the following commands:
+
+```
+yarn
+```
+
+This will install all the required dependencies. Then, once finished, run:
+
+```
+yarn start
+```
+
+## Example
 
 ![finger emojis pointing towards something](https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/example.png)
-  
-This was also a great opportunity to learn more about React, especially Hooks.
 
 Copyright ©­­ 2019 Alexis Benamar
