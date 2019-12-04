@@ -3,44 +3,51 @@ import styled from 'styled-components'
 
 import useMouseData from '../hooks/useMouseData'
 
-const EmojiSpan = styled.span`
+const EmojiDiv = styled.div`
   display: inline-block;
-  height: 30px;
-  width: 30px;
   text-align: center;
-  font-size: 20px;
-  transform-origin: 13px 18px;
+  width: 30px;
+  height: 30px;
+
+  :after {
+    content: '${props => props.emoji}';
+  }
 
   :hover {
     cursor: default;
+    
+    :after { 
+      content: '🤡' !important;  
+    }
   }
-
-  &.south { transform: rotate(90deg); }
-  &.west { transform: rotate(180deg); }
-  &.north { transform: rotate(270deg); }
 `
 
 const quarter = (n) => n * (Math.PI / 2)
 const eigth = Math.PI / 4
 
 const Emoji = props => {
-  const [mouseAngle, mouseDistance, elRef] = useMouseData() 
+  const [mouseAngle, mouseDistance, elRef] = useMouseData()
+  
+  const emojiColor = 
+  mouseDistance >= 150 ? ['👉🏿', '👆🏿', '👈🏿', '👇🏿'] :
+  mouseDistance < 150 && mouseDistance >= 120 ? ['👉🏾', '👆🏾', '👈🏾', '👇🏾'] :
+  mouseDistance < 120 && mouseDistance >= 90 ? ['👉🏽', '👆🏽', '👈🏽', '👇🏽'] :
+  mouseDistance < 90 && mouseDistance >= 60 ? ['👉🏼', '👆🏼', '👈🏼', '👇🏼'] : ['👉🏻', '👆🏻', '👈🏻', '👇🏻']
 
-  const direction =
-    mouseAngle >= eigth && mouseAngle < quarter(1) + eigth ? 'east' :
-    mouseAngle >= quarter(1) + eigth && mouseAngle < quarter(2) + eigth ? 'north' :
-    mouseAngle >= quarter(2) + eigth && mouseAngle < quarter(3) + eigth ? 'west' : 'south'
+  const emoji =
+    mouseAngle >= eigth && mouseAngle < quarter(1) + eigth ? emojiColor[0] :
+    mouseAngle >= quarter(1) + eigth && mouseAngle < quarter(2) + eigth ? emojiColor[1] :
+    mouseAngle >= quarter(2) + eigth && mouseAngle < quarter(3) + eigth ? emojiColor[2] : emojiColor[3]
 
   return (
-    <EmojiSpan
+    <EmojiDiv
       ref={elRef}
-      className={"emoji " + direction}
+      className={"emoji"}
+      emoji={emoji}
       role="img"
       aria-label={props.label ? props.label : ""}
-      aria-hidden={props.label ? false : true}
     >
-      {props.symbol}
-    </EmojiSpan>
+    </EmojiDiv>
   )
 }
 

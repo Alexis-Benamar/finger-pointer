@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import NewEmoji from './NewEmoji'
+import Emoji from './Emoji'
 
 const emojiNumber = 99
 
@@ -14,7 +14,7 @@ const Grid = () => {
   const grid = []
 
   for (let i = 0; i < emojiNumber; i++) {
-    grid.push(<NewEmoji key={i} />)
+    grid.push(<Emoji key={i} />)
   }
 
   return (
