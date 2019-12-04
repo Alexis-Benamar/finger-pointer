@@ -2,7 +2,11 @@
 
 >_a joke, mostly._
 
-My goal with this little project was to learn more about React & React Hooks, `useEffect()` and `useRef()` in particular. So, naturally, I reproduced, with a slight interactivity twist, a dead twitter meme to do so.
+My goal with this little project was to learn more about React & React Hooks, `useEffect()` and `useRef()` in particular. So, naturally, I reproduced, with a slight interactivity twist, a dead twitter meme:
+
+<div align=center>
+  <img width="250" src="https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/example.png">
+</div>
 
 ## Setup
 
@@ -20,6 +24,5 @@ yarn start
 
 ## Example
 
-![finger emojis pointing towards something](https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/example.png)
 
 Copyright ©­­ 2019 Alexis Benamar
