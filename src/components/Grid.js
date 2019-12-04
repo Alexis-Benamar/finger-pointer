@@ -6,8 +6,7 @@ import Emoji from './Emoji'
 const emojiNumber = 99
 
 const GridContainer = styled.div`
-  max-width: calc(11 * 30px);
-  margin: 64px auto;
+  max-width: calc(11 * 40px);
 `
 
 const Grid = () => {
