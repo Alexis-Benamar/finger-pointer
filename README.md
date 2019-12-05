@@ -2,6 +2,8 @@
 
 >_a joke, mostly._
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60d1f541-ca36-4245-81f3-14dc4004ebbb/deploy-status)](https://app.netlify.com/sites/finger-pointer/deploys)
+
 My goal with this little project was to learn more about React & React Hooks, `useEffect()` and `useRef()` in particular. So, naturally, I reproduced, with a slight interactivity twist, a [dead twitter meme](https://knowyourmeme.com/memes/cascading-pointing-hand-emoji-copypasta).
 
 <div align=center>
