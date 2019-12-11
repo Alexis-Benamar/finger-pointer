@@ -7,6 +7,10 @@ const emojiNumber = 99
 
 const GridContainer = styled.div`
   max-width: calc(11 * 40px);
+
+  @media screen and (max-width: 768px) {
+    max-width: calc(11 * 30px);
+  }
 `
 
 const Grid = () => {
