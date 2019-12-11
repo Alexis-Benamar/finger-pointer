@@ -9,18 +9,23 @@ const useMousePos = () => {
       if (!enable.current) return
       
       enable.current = false
-      setCoords({
+      setCoords(e.type === 'mousemove' ? {
         x: e.clientX,
         y: e.clientY
+      } : {
+        x: Math.round(e.touches[0].clientX),
+        y: Math.round(e.touches[0].clientY)
       })
 
       setTimeout(() => enable.current = true, 50)
     }
 
     document.addEventListener("mousemove", handleMouseMove)
-
+    document.addEventListener("touchmove", handleMouseMove)
+    
     return () => {
       document.removeEventListener("mousemove", handleMouseMove)
+      document.removeEventListener("touchmove", handleMouseMove)
     }
   })
 
