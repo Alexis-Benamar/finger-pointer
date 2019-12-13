@@ -14,12 +14,20 @@ const EmojiDiv = styled.div`
     content: '${props => props.emoji}';
   }
 
-  :hover {
-    cursor: default;
-    
-    :after { 
-      content: '🤡' !important;  
+  @media screen and (min-width: 768px) {
+    :hover {
+      cursor: default;
+      
+      :after { 
+        content: '🤡' !important;  
+      }
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 30px;
+    height: 32px;
+    font-size: 20px;
   }
 `
 
@@ -28,12 +36,12 @@ const eigth = Math.PI / 4
 
 const Emoji = props => {
   const [mouseAngle, mouseDistance, elRef] = useMouseData()
-  
+
   const emojiColor = 
-  mouseDistance >= 180 ? ['👉🏿', '👆🏿', '👈🏿', '👇🏿'] :
-  mouseDistance < 180 && mouseDistance >= 140 ? ['👉🏾', '👆🏾', '👈🏾', '👇🏾'] :
-  mouseDistance < 140 && mouseDistance >= 100 ? ['👉🏽', '👆🏽', '👈🏽', '👇🏽'] :
-  mouseDistance < 100 && mouseDistance >= 60 ? ['👉🏼', '👆🏼', '👈🏼', '👇🏼'] : ['👉🏻', '👆🏻', '👈🏻', '👇🏻']
+    mouseDistance >= 180 ? ['👉🏿', '👆🏿', '👈🏿', '👇🏿'] :
+    mouseDistance < 180 && mouseDistance >= 140 ? ['👉🏾', '👆🏾', '👈🏾', '👇🏾'] :
+    mouseDistance < 140 && mouseDistance >= 100 ? ['👉🏽', '👆🏽', '👈🏽', '👇🏽'] :
+    mouseDistance < 100 && mouseDistance >= 60 ? ['👉🏼', '👆🏼', '👈🏼', '👇🏼'] : ['👉🏻', '👆🏻', '👈🏻', '👇🏻']
 
   const emoji =
     mouseAngle >= eigth && mouseAngle < quarter(1) + eigth ? emojiColor[0] :
