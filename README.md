@@ -10,6 +10,12 @@ My goal with this little project was to learn more about React & React Hooks, `u
   <img width="250" src="https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/meme.png">
 </div>
 
+## Example
+
+<div align=center>
+  <img width="250" src="https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/example.gif">
+</div>
+
 ## Setup
 
 This was made using `create-react-app`. To install it, simply clone the project, then run the following commands:
@@ -24,7 +30,6 @@ This will install all the required dependencies. Then, once finished, run:
 yarn start
 ```
 
-## Example
-
+---
 
 Copyright ©­­ 2019 Alexis Benamar
