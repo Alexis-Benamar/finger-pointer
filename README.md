@@ -13,7 +13,7 @@ My goal with this little project was to learn more about React & React Hooks, `u
 ## Example
 
 <div align=center>
-  <img width="250" src="https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/example.gif">
+  <img width="450" src="https://raw.githubusercontent.com/alexis-benamar/finger-pointer/master/example.gif">
 </div>
 
 ## Setup
