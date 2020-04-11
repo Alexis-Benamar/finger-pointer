@@ -29,7 +29,10 @@
     ]
   },
   "devDependencies": {
+    "acorn": "7.1.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "kind-of": "6.0.3",
+    "minimist": "0.2.1",
     "styled-components": "^4.4.1"
   }
 }
