@@ -7,11 +7,13 @@ const useMouseData = () => {
   const [distance, setDistance] = useState(0)
   const {x, y} = useMousePos()
   const elRef = useRef()
+
   const elPos = useMemo(() => {
     if (!elRef.current) return null
     
     const elRect = elRef.current.getBoundingClientRect()  
-    return {x: elRect.left + elRect.width / 2, y: elRect.top + elRect.height / 2} 
+    return {x: elRect.left + elRect.width / 2, y: elRect.top + elRect.height / 2}
+    // eslint-disable-next-line
   }, [elRef.current])
 
   useEffect(() => {
